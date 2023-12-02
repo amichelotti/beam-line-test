@@ -11,7 +11,7 @@ fi
 
 THIS_DIR=$(dirname ${0})
 
-echo "Loading IOC environment for blxxi ..."
+echo "Loading IOC environment for beam-line-test ..."
 
 #### SECTION 1. Environment variables ##########################################
 
@@ -19,9 +19,9 @@ echo "Loading IOC environment for blxxi ..."
 # use spaces to separate multiple mappings
 export EC_REGISTRY_MAPPING='github.com=ghcr.io'
 # the namespace to use for kubernetes deployments - use local for local docker/podman
-export EC_K8S_NAMESPACE=local
+export EC_K8S_NAMESPACE=beam-line-test
 # the git repo for this beamline (or accelerator domain)
-export EC_DOMAIN_REPO=git@github.com:epics-containers/blxxi-template.git
+export EC_DOMAIN_REPO=git@github.com:amichelotti/beam-line-test.git
 # declare your centralised log server Web UI
 # export EC_LOG_URL='https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{ioc_name}*'
 # enforce a specific container cli - defaults to whatever is available
